@@ -16,7 +16,8 @@ let returnThirdIndex = function (days) {
 
 //Exercice 4 : Changer le 2ème élément du tableau languages par php.
 let changeSecondElement = function (languages) {
-  languages[1] = "php";
+  // languages[1] = "php";
+  languages.splice(1,1,"php");
   return languages;
 }
 
@@ -34,7 +35,7 @@ let addAtFirst = function (languages) {
 
 //Exercice 7 : Supprimer le premier élément du tableau languages.
 let removeFirstElement = function (languages) {
-  languages.shift([0]);
+  languages.shift();
   return languages;
 }
 
@@ -64,7 +65,7 @@ let returnSentence = function (person) {
   let age = person["age"];
   let city = person["city"];
   // return '"Bonjour, je suis ' + fname + ". J'ai " + age + " ans et j'habite " + city + '."';
-  return "Bonjour, je suis ".concat(fname) + ". J'ai ".concat(age) + " ans et j'habite ".concat(city) + ".";
+  return `Bonjour, je suis ${fname}. J'ai ${age} ans et j'habite ${city}.`
 }
 
 //Exercice 12 : Transformer la variable string en tableau.
@@ -79,5 +80,7 @@ let sortArray = function (array) {
 
 //Exercice 14 : Transformer le tableau array en chaîne de caractères.
 let returnString = function (array) {
-  return array.toString();
+  console.log(array)
+  // console.log(array.toString());
+  return array.join(",");
 }
